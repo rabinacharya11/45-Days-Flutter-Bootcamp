@@ -1,46 +1,72 @@
-# Git and GitHub Basics
+# What is dart ? 
+Dart is a statically typed programming language, which means that you have to declare the type of a variable when you declare it. Here are some of the most common data types in Dart:
 
-Git is a distributed version control system that is widely used for tracking changes in source code during software development. GitHub is a web-based platform that provides hosting for Git repositories, as well as a range of collaboration tools for teams working on software projects.
+## Variables in Dart
 
-## Basic Git Commands
+In Dart, a variable is a named memory location that can hold a value of a specific data type. Variables are used to store data that can be used and manipulated throughout a program.
 
-Here are some of the basic Git commands that are commonly used:
+### Here's an example of declaring a variable in Dart: 
 
-git init: Initializes a new Git repository in the current directory.
+String name = "John";
 
-git add: Adds files to the staging area (i.e., the set of changes to be committed).
+In this example, we declared a variable named name of type String and assigned it the value "John".
 
-git commit: Commits the staged changes to the repository.
+### When naming variables in Dart, there are some rules that you need to follow:
 
-git status: Shows the current status of the repository.
+Variable names must start with a letter or an underscore (_).
+Variable names cannot start with a number.
+Variable names can contain letters, numbers, and underscores (_).
+Variable names are case-sensitive, which means that name and Name are two different variables.
+Variable names should be descriptive and meaningful.
 
-git log: Shows a log of all commits in the repository.
 
-git branch: Lists all branches in the repository.
+### Here are some examples of valid variable names in Dart:
 
-git checkout: Switches to a different branch or commit.
+String name = "John";
+int age = 25;
+double temperature = 98.6;
+bool isStudent = true;
+List<String> fruits = ['apple', 'banana', 'orange'];
+Note that it's common practice to use camel case when naming variables in Dart, where the first word is lowercase and the subsequent words start with a capital letter (e.g., isStudent, fruits).
 
-git merge: Merges changes from one branch into another.
 
-git clone: Creates a local copy of a remote repository.
+## Datatypes in Dart
 
-git pull: Fetches and merges changes from a remote repository.
+### Numbers:
 
-git push: Pushes local changes to a remote repository.
+int: represents integers (whole numbers) with no fractional part
+double: represents floating-point numbers with a fractional part
 
-## GitHub Basics
+### Strings:
 
-Here are some of the basic features of GitHub:
+represents a sequence of characters enclosed in single or double quotes.
 
-Repositories: A repository is a collection of files that are managed using Git. GitHub provides hosting for both public and private repositories.
-Issues: Issues are used to track bugs, feature requests, and other tasks related to a project. Issues can be assigned to specific team members, labeled, and commented on.
-Pull requests: Pull requests are used to propose changes to a project. They allow team members to review and discuss changes before they are merged into the main branch.
-Collaborators: Collaborators are team members who have been given access to a repository. They can push changes to the repository and participate in discussions.
+### Booleans:
 
-## Conclusion
+represents a true or false value.
+### Lists:
 
-Git and GitHub are powerful tools that can help teams collaborate on software development projects.
-By mastering the basics of Git and GitHub, you can streamline your workflow and increase your productivity as a software developer.
+represents an ordered collection of objects.
 
-Prepared by
-Rabin Acharya
+Lists can be typed or untyped.
+ 
+### Maps:
+
+represents a collection of key-value pairs where each key is unique.
+Sets:
+
+represents a collection of unique objects.
+ ### Here's an example of how you can declare variables with different data types:
+
+int age = 25;
+double temperature = 98.6;
+String name = "John";
+bool isStudent = true;
+List<String> fruits = ['apple', 'banana', 'orange'];
+Map<String, int> grades = {'math': 90, 'science': 85, 'history': 92};
+Set<int> numbers = {1, 2, 3, 4, 5};  
+
+
+
+
+
