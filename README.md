@@ -33,3 +33,4 @@ Git and GitHub are powerful tools that can help teams collaborate on software de
 By mastering the basics of Git and GitHub, you can streamline your workflow and increase your productivity as a software developer.
 
 Prepared by
+Rabin Acharya
