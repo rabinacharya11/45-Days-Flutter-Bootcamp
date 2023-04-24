@@ -23,10 +23,15 @@ Variable names should be descriptive and meaningful.
 ### Here are some examples of valid variable names in Dart:
 
 String name = "John";
+
 int age = 25;
+
 double temperature = 98.6;
+
 bool isStudent = true;
+
 List<String> fruits = ['apple', 'banana', 'orange'];
+ 
 Note that it's common practice to use camel case when naming variables in Dart, where the first word is lowercase and the subsequent words start with a capital letter (e.g., isStudent, fruits).
 
 
@@ -35,6 +40,7 @@ Note that it's common practice to use camel case when naming variables in Dart, 
 ### Numbers:
 
 int: represents integers (whole numbers) with no fractional part
+ 
 double: represents floating-point numbers with a fractional part
 
 ### Strings:
@@ -59,11 +65,17 @@ represents a collection of unique objects.
  ### Here's an example of how you can declare variables with different data types:
 
 int age = 25;
+ 
 double temperature = 98.6;
+ 
 String name = "John";
+ 
 bool isStudent = true;
+ 
 List<String> fruits = ['apple', 'banana', 'orange'];
+ 
 Map<String, int> grades = {'math': 90, 'science': 85, 'history': 92};
+ 
 Set<int> numbers = {1, 2, 3, 4, 5};  
 
 
