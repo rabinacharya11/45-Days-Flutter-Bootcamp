@@ -35,7 +35,9 @@ import 'dart:io';  // this package helps to get the user input from the user
 void main() { 
 
 print("Enter name of the student: ")
+
 String? name = stdin.readLineSync();
+
 print("The name of the student you entered is $name " ) ;
 
 }
