@@ -1,12 +1,17 @@
 void main() {
   addNumbers(6, 9, 8);
 
-  numberes(a: 34, b: 3); 
+  numberes(a: 34, b: 3);
 
+  int result = addTwoNumbers(3, 5);
+  int res = arrowFunctions(12, 1);
 
-  int result = addTwoNumbers(3,5);
+  const int pi = 0;
 
-  print(result);
+  /// calling the anonmous functions
+  final res1 = cube(number1: 1, nnumer2: 2, str: 3);
+
+  print(res1);
 }
 
 /// Functions
@@ -28,6 +33,22 @@ void numberes({required int b, int? a}) {
 
 /// Return type of [int]
 int addTwoNumbers(int a, int b) {
-int sum = a+b;
- return sum;
+  int sum = a + b;
+  return sum;
 }
+
+/// [Arrow] Functions =>
+/// '=>' carries curly bracket 'return'
+
+int arrowFunctions(int a, int b) => a + b;
+
+/// Anonymonus Functions
+///
+/// This kind of doesn't have a name
+var cube = (
+        {required int number1, required int nnumer2, required double str}) =>
+    number1 * number1 * number1;
+
+
+
+
