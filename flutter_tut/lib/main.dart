@@ -27,25 +27,55 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          height: 400,
-          width: 300,
-          child: Center(
-            child: Text(
-              "Hello",
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                color: Colors.indigo,
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
-                decoration: TextDecoration.overline,
-                letterSpacing: 10,
-              ),
+        body: SafeArea(
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        width: 400,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 30,
             ),
-          ),
+            Container(
+              height: 50,
+              width: 200,
+              color: Colors.red,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 50,
+              color: Colors.red,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 50,
+              width: 200,
+              color: Colors.red,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 50,
+              width: 200,
+              color: Colors.red,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 50,
+              color: Colors.red,
+            ),
+          ],
         ),
       ),
-    );
+    ));
   }
 }
