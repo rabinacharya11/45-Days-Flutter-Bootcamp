@@ -29,50 +29,39 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         body: SafeArea(
       child: SizedBox(
-        height: MediaQuery.of(context).size.height,
-        width: 400,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              height: 30,
-            ),
             Container(
-              height: 50,
-              width: 200,
+              height: 100,
+              width: 30,
               color: Colors.red,
             ),
             SizedBox(
-              height: 30,
+              width: 10,
             ),
             Container(
-              height: 50,
+              height: 400,
+              width: 30,
               color: Colors.red,
             ),
             SizedBox(
-              height: 30,
+              width: 10,
             ),
             Container(
-              height: 50,
-              width: 200,
+              height: 400,
+              width: 30,
               color: Colors.red,
             ),
             SizedBox(
-              height: 30,
+              width: 10,
             ),
             Container(
-              height: 50,
-              width: 200,
+              height: 400,
+              width: 30,
               color: Colors.red,
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              height: 50,
-              color: Colors.red,
-            ),
+            )
           ],
         ),
       ),
