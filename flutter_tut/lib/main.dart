@@ -80,14 +80,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 print("Tapped on container");
               },
               child: Container(
-                color: Colors.blue,
+                color: Colors.white,
                 height: 40,
                 width: 200,
                 child: Center(child: Text("Send Message")),
               ),
             ),
-
-            
+            GestureDetector(
+              onLongPress: () {
+                print("Long Presssed on container");
+              },
+              onDoubleTap: () {
+                print("double tapped on container");
+              },
+              onTap: () {
+                print("Tapped on container");
+              },
+              child: Container(
+                color: Colors.white,
+                height: 40,
+                width: 200,
+                child: Center(child: Text("Send Message")),
+              ),
+            ),
           ],
         ),
       ),
