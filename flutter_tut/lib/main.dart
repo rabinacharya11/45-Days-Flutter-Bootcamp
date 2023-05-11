@@ -69,6 +69,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.grey,
               ),
             ),
+            InkWell(
+              onLongPress: () {
+                print("Long Presssed on container");
+              },
+              onDoubleTap: () {
+                print("double tapped on container");
+              },
+              onTap: () {
+                print("Tapped on container");
+              },
+              child: Container(
+                color: Colors.blue,
+                height: 40,
+                width: 200,
+                child: Center(child: Text("Send Message")),
+              ),
+            ),
+
+            
           ],
         ),
       ),
