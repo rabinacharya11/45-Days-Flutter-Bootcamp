@@ -27,6 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        // drawer: Drawer(),
+        // appBar: AppBar(),
         body: SafeArea(
       child: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -35,74 +37,18 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextButton(
-              onLongPress: () {
-                print("long pressed");
-              },
-              onPressed: () {
-                print("object");
-              },
-              child: Text("Click Me"),
-            ),
-            ElevatedButton(
-              onLongPress: () {
-                print("long pressed");
-              },
-              onPressed: () {
-                print("object");
-              },
-              child: Text("Clicjk Me"),
-            ),
-            Icon(
-              Icons.search,
-              size: 50,
-              color: Colors.grey,
-            ),
-            IconButton(
-              padding: EdgeInsets.zero,
-              onPressed: () {
-                print("object");
-              },
-              icon: Icon(
-                Icons.search,
-                size: 50,
-                color: Colors.grey,
+            Container(
+              height: 200,
+              child: CircleAvatar(
+                minRadius: 100,
+                maxRadius: 300,
+                backgroundColor: Colors.amber,
+                backgroundImage: NetworkImage(
+                    "https://media.istockphoto.com/id/629022568/photo/branching-moonlight.jpg?s=612x612&w=0&k=20&c=pECtItfnKuOC-RIzGXk1tQfzWSetMEmwiQCX5msooxg="),
               ),
-            ),
-            InkWell(
-              onLongPress: () {
-                print("Long Presssed on container");
-              },
-              onDoubleTap: () {
-                print("double tapped on container");
-              },
-              onTap: () {
-                print("Tapped on container");
-              },
-              child: Container(
-                color: Colors.white,
-                height: 40,
-                width: 200,
-                child: Center(child: Text("Send Message")),
-              ),
-            ),
-            GestureDetector(
-              onLongPress: () {
-                print("Long Presssed on container");
-              },
-              onDoubleTap: () {
-                print("double tapped on container");
-              },
-              onTap: () {
-                print("Tapped on container");
-              },
-              child: Container(
-                color: Colors.white,
-                height: 40,
-                width: 200,
-                child: Center(child: Text("Send Message")),
-              ),
-            ),
+            ), 
+
+            
           ],
         ),
       ),
