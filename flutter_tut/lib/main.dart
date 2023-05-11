@@ -29,39 +29,22 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         body: SafeArea(
       child: SizedBox(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              height: 100,
-              width: 30,
-              color: Colors.red,
+            TextButton(
+              onLongPress: () {
+                print("long pressed");
+              },
+              onPressed: () {
+                print("object");
+              },
+              child: Text("Click Me"),
             ),
-            SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 400,
-              width: 30,
-              color: Colors.red,
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 400,
-              width: 30,
-              color: Colors.red,
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 400,
-              width: 30,
-              color: Colors.red,
-            )
+
           ],
         ),
       ),
