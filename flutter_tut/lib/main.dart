@@ -44,7 +44,14 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: Text("Click Me"),
             ),
-
+            ElevatedButton(
+                onLongPress: () {
+                  print("long pressed");
+                },
+                onPressed: () {
+                  print("object");
+                },
+                child: Text("Clicjk Me")),
           ],
         ),
       ),

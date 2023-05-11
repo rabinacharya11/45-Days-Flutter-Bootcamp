@@ -1,7 +1,16 @@
-// import 'dart:io';
+import 'dart:io';
 
-// void main() {
-//   print("Enter name:");
-//   String? name = stdin.readLineSync();
-//   print("The entered name is ${name}");
-// }
+void main() {
+  print("Enter name:");
+  String? marks = stdin.readLineSync();
+
+  switch (int.parse(marks!)) {
+    case 90:
+      break;
+
+
+    case 80:
+      break;
+    default:
+  }
+}
