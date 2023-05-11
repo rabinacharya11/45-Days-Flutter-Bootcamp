@@ -54,10 +54,21 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Text("Clicjk Me"),
             ),
             Icon(
-              Icons.access_alarm_rounded,
+              Icons.search,
               size: 50,
-              color: Colors.red,
-            )
+              color: Colors.grey,
+            ),
+            IconButton(
+              padding: EdgeInsets.zero,
+              onPressed: () {
+                print("object");
+              },
+              icon: Icon(
+                Icons.search,
+                size: 50,
+                color: Colors.grey,
+              ),
+            ),
           ],
         ),
       ),
