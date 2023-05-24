@@ -92,13 +92,47 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      final isValidLogin = validateCredentials(
-                          email: emailController.text.trim(),
-                          password: passwordController.text.trim());
+                  Builder(
+                    builder: (context) => InkWell(
+                      onTap: () {
+                        // showAboutDialog(context: context);
 
-                      if (isValidLogin) {
+                        // showBottomSheet(
+                        //     enableDrag: true,
+                        //     context: context,
+                        //     builder: (context) => Container(
+                        //         height: 300,
+                        //         width: double.infinity,
+                        //         color: Colors.white,
+                        //         child: Text("data")));
+
+                        showDialog(
+                            context: context,
+                            builder: (context) => Dialog(
+                                  // surfaceTintColor: Colors.red,
+                                  // shadowColor: Colors.amber,
+                                  child: Container(
+                                      height: 40,
+                                      width: double.infinity,
+                                      color: Colors.green,
+                                      child: Column(
+                                        children: [
+                                          Text("data"),
+                                          Text("data"),
+                                          Text("data"),
+                                          Text("data"),
+                                          Text("data"),
+                                          Text("data"),
+                                          Text("data"),
+                                        ],
+                                      )),
+                                ));
+
+                        // final isValidLogin = validateCredentials(
+                        //     email: emailController.text.trim(),
+                        //     password: passwordController.text.trim());
+
+                        // if (isValidLogin) {
                         /// [1st Method]
                         // Navigator.push(
                         //   context,
@@ -119,23 +153,24 @@ class _HomeScreenState extends State<HomeScreen> {
                         //   ),
                         // );
 
-                        Navigator.pushNamed(context, 'login');
-                      }
-                      // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      //     content: Text(
-                      //         'Email : ${emailController.text} \n Password: ${passwordController.text}')));
-                    },
-                    child: Container(
-                      height: 40,
-                      width: 200,
-                      color: Colors.blue,
-                      child: Center(
-                          child: Text(
-                        "Log In",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      )),
+                        // Navigator.pushNamed(context, 'login');
+                        // }
+                        // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        //     content: Text(
+                        //         'Email : ${emailController.text} \n Password: ${passwordController.text}')));
+                      },
+                      child: Container(
+                        height: 40,
+                        width: 200,
+                        color: Colors.blue,
+                        child: Center(
+                            child: Text(
+                          "Log In",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        )),
+                      ),
                     ),
                   ),
                   Text(
