@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tut/home_screen.dart';
 import 'package:flutter_tut/logged_in_screen.dart';
 
 void main() {
@@ -15,21 +14,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Builder(builder: (context) {
-          return Scaffold(
-            drawer: Drawer(
-              child: Center(
-                  child: InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Text("Close Drawer"))),
-            ),
-            appBar: AppBar(),
-            body: SafeArea(
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
+        home:
+            //  Builder(builder: (context) {
+            // return
+            Scaffold(
+          drawer: Drawer(
+            child: Center(
+                child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text("Close Drawer"))),
+          ),
+          appBar: AppBar(),
+          body: SafeArea(
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: SingleChildScrollView(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,8 +41,17 @@ class MyApp extends StatelessWidget {
                         height: 400,
                         width: 300,
                       ),
-                      Text(
-                        "Sign In ",
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushReplacement(
+                            CupertinoPageRoute(
+                              builder: (_) => LoggedInScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Sign In ",
+                        ),
                       ),
                       Text(
                         "You can access Fingerprint \nto to grant access to the app Rs. \$100",
@@ -81,28 +92,107 @@ class MyApp extends StatelessWidget {
                       Builder(builder: (context) {
                         return InkWell(
                             onTap: () {
-                              showAboutDialog(
-                                context: context,
-                                applicationName: 'Flutter App',
-                                applicationVersion: '1.0.1+1',
-                                children: [
-                                  Text("data"),
-                                  Text("data"),
-                                  Text("data"),
-                                  Text("data"),
-                                  Text("data"),
-                                  Text("data"),
-                                  Text("data"),
-                                  Text("data"),
-                                  Text("data"),
-                                ],
-                                applicationIcon: Image.network(
-                                  'https://media.istockphoto.com/id/637696304/photo/patan.jpg?s=612x612&w=0&k=20&c=-53aSTGBGoOOqX5aoC3Hs1jhZ527v3Id_xOawHHVPpg=',
-                                  height: 40,
-                                  width: 40,
-                                  fit: BoxFit.cover,
-                                ),
-                              );
+                              ///[ Normal dialog box]
+                              // showDialog(
+                              //     context: context,
+                              //     builder: (context) => Dialog(
+                              //           child: Container(
+                              //             height: 400,
+                              //             child: Container(
+                              //               child: Column(
+                              //                 children: [
+                              //                   Text("Hello"),
+                              //                 ],
+                              //               ),
+                              //             ),
+                              //             color: Colors.white,
+                              //           ),
+                              //         ));
+
+                              /// [Alert Dialg box]
+                              // showDialog(
+                              //     context: context,
+                              //     builder: (context) => AlertDialog(
+                              //           actions: [
+                              //             TextButton(
+                              //               onPressed: () {
+                              //                 Navigator.pop(context);
+                              //               },
+                              //               child: Text("no"),
+                              //             ),
+                              //             TextButton(
+                              //               onPressed: () {
+                              //                 Navigator.pop(context);
+                              //               },
+                              //               child: Text("yes"),
+                              //             ),
+                              //           ],
+                              //           content: Container(
+                              //             height: 400,
+                              //             child: Container(
+                              //               child: Column(
+                              //                 children: [
+                              //                   Text("Hello"),
+                              //                 ],
+                              //               ),
+                              //             ),
+                              //             color: Colors.white,
+                              //           ),
+                              //         ));
+
+                              /// [ Bottom Sheet]
+                              // showBottomSheet(
+                              //     enableDrag: false,
+                              //     context: context,
+                              //     builder: (_) => Container(
+                              //           height: 200,
+                              //           width: double.infinity,
+                              //           color: Colors.red,
+                              //           child: InkWell(
+                              //               onTap: () {
+                              //                 Navigator.pop(context);
+                              //               },
+                              //               child: Text("data")),
+                              //         ));
+
+                              /// [Modal Bottom Sheet]
+                              // showModalBottomSheet(
+                              //     enableDrag: false,
+                              //     context: context,
+                              //     builder: (_) => Container(
+                              //           height: 200,
+                              //           width: double.infinity,
+                              //           color: Colors.red,
+                              //           child: InkWell(
+                              //               onTap: () {
+                              //                 Navigator.pop(context);
+                              //               },
+                              //               child: Text("data")),
+                              //         ));
+
+                              /// [About dialog box]
+                              // showAboutDialog(
+                              //   context: context,
+                              //   applicationName: 'Flutter App',
+                              //   applicationVersion: '1.0.1+1',
+                              //   children: [
+                              //     Text("data"),
+                              //     Text("data"),
+                              //     Text("data"),
+                              //     Text("data"),
+                              //     Text("data"),
+                              //     Text("data"),
+                              //     Text("data"),
+                              //     Text("data"),
+                              //     Text("data"),
+                              //   ],
+                              //   applicationIcon: Image.network(
+                              //     'https://media.istockphoto.com/id/637696304/photo/patan.jpg?s=612x612&w=0&k=20&c=-53aSTGBGoOOqX5aoC3Hs1jhZ527v3Id_xOawHHVPpg=',
+                              //     height: 40,
+                              //     width: 40,
+                              //     fit: BoxFit.cover,
+                              //   ),
+                              // );
 
                               // showBottomSheet(
                               //     enableDrag: true,
@@ -220,11 +310,15 @@ class MyApp extends StatelessWidget {
                     ]),
               ),
             ),
-            // routes: {
-            //   'home':(context) => HomeScreen(),
-            //   'login': (context) => LoggedInScreen(),
-            // },
-          );
-        }));
+          ),
+          // routes: {
+          //   'home':(context) => HomeScreen(),
+          //   'login': (context) => LoggedInScreen(),
+          // },
+        ));
+    // })
+
+    // )
+    // ;
   }
 }
