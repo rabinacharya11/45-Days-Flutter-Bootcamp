@@ -91,7 +91,42 @@ class MyApp extends StatelessWidget {
                       ),
                       Builder(builder: (context) {
                         return InkWell(
-                            onTap: () {
+                            onTap: () { 
+
+
+
+                              // ScaffoldMessenger.of(context).showSnackBar(
+                              //   SnackBar(
+                              //     dismissDirection: DismissDirection.horizontal,
+                              //     duration: Duration(
+                              //       seconds: 10,
+                              //     ),
+                              //     backgroundColor: Colors.white,
+                              //     showCloseIcon: true,
+                              //     content:
+                              //         Text("Successfully deleted the photo"),
+                              //     action: SnackBarAction(
+                              //         label: 'Undo',
+                              //         onPressed: () {
+                              //           showDialog(
+                              //               context: context,
+                              //               builder: (context) => Dialog(
+                              //                     child: Container(
+                              //                       height: 400,
+                              //                       child: Container(
+                              //                         child: Column(
+                              //                           children: [
+                              //                             Text("Hello"),
+                              //                           ],
+                              //                         ),
+                              //                       ),
+                              //                       color: Colors.black,
+                              //                     ),
+                              //                   ));
+                              //         }),
+                              //   ),
+                              // );
+
                               ///[ Normal dialog box]
                               // showDialog(
                               //     context: context,
