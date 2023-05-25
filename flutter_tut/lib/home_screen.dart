@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text("You are not logged in")));
 
-      return true;
+      return false;
     }
   }
 
@@ -106,40 +106,40 @@ class _HomeScreenState extends State<HomeScreen> {
                         //         color: Colors.white,
                         //         child: Text("data")));
 
-                        showDialog(
-                            context: context,
-                            builder: (context) => Dialog(
-                                  // surfaceTintColor: Colors.red,
-                                  // shadowColor: Colors.amber,
-                                  child: Container(
-                                      height: 40,
-                                      width: double.infinity,
-                                      color: Colors.green,
-                                      child: Column(
-                                        children: [
-                                          Text("data"),
-                                          Text("data"),
-                                          Text("data"),
-                                          Text("data"),
-                                          Text("data"),
-                                          Text("data"),
-                                          Text("data"),
-                                        ],
-                                      )),
-                                ));
+                        final isValidLogin = validateCredentials(
+                            email: emailController.text.trim(),
+                            password: passwordController.text.trim());
 
-                        // final isValidLogin = validateCredentials(
-                        //     email: emailController.text.trim(),
-                        //     password: passwordController.text.trim());
+                        if (!isValidLogin) {
+                          showDialog(
+                              context: context,
+                              builder: (context) => Dialog(
+                                    // surfaceTintColor: Colors.red,
+                                    // shadowColor: Colors.amber,
+                                    child: Container(
+                                        height: 200,
+                                        width: 400,
+                                        color: Colors.green,
+                                        child: Column(
+                                          children: [
+                                            Text("Invalid Credentials"),
+                                            ElevatedButton(
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Text("Close"))
+                                          ],
+                                        )),
+                                  ));
+                        }
 
-                        // if (isValidLogin) {
                         /// [1st Method]
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (_) => LoggedInScreen(),
-                        //   ),
-                        // );
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => LoggedInScreen(),
+                          ),
+                        );
 
                         /// [2nd mettjod]
                         /// [push]
@@ -147,13 +147,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         // Navigator.of(context).push(MaterialPageRoute(
                         //     builder: (_) => LoggedInScreen()));
 
-                        // Navigator.of(context).pushReplacement(
-                        //   CupertinoPageRoute(
-                        //     builder: (_) => LoggedInScreen(),
-                        //   ),
-                        // );
+                        Navigator.of(context).pushReplacement(
+                          CupertinoPageRoute(
+                            builder: (_) => LoggedInScreen(),
+                          ),
+                        );
 
-                        // Navigator.pushNamed(context, 'login');
+                        Navigator.of(context).pushNamed('login');
+                        Navigator.pushNamed(context, 'login');
                         // }
                         // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         //     content: Text(
